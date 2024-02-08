@@ -38,7 +38,7 @@
       </symbol>
     </svg>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <!-- <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
       <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
               id="bd-theme"
               type="button"
@@ -71,7 +71,7 @@
           </button>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     
 <header data-bs-theme="dark">
@@ -80,8 +80,7 @@
       <div class="row justify-content-center">
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class = "text-center">About</h4>
-          <p class="text-body-secondary text-center">Welcome to our catalogue! Here you will find a wide variety of items including skiing and snowboarding gear. Browse our massive catalogue and discover our 2 pages of items!</p><a href="snowboardingCatalogue.html"    class="navbar-brand d-flex">
-            <strong>Snowboarding Items</strong>
+          <p class="text-body-secondary text-center">Welcome to our catalogue! Here you will find a wide variety of items including skiing and snowboarding gear. Browse our massive catalogue and discover our 2 pages of items!</p><h3 class = "text-center"><a style="margin:auto; text-decoration: none;color:inherit" href = "snowboardingCatalogue.html"><strong>Snowboarding Items</strong></a></h3>
         </div>
             
           </a>
@@ -101,100 +100,136 @@
 <main>
 
     <section class ="my-4">
-    <h1 style="text-align: center;">Assignment 1</h1>
+    <h1 style="text-align: center;">Skiing Catalogue</h1>
     </section>
 
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 row-lg-12">
         <div class="col">
-          <div class="card shadow-sm">
-            <img src = "./images/sunflower.jpg" alt = "sunflower">
+          <div class="card shadow-sm h-70">
+            <img src = "./images/SalomonQST.jpg" alt = "Salomon QST Access 70 Ski Boots">
             <div class="card-body">
-              <p class="card-text">The common sunflower (Helianthus annuus) is a large annual forb of the genus Helianthus. It is commonly grown as a crop for its edible oily seeds</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <p class="card-title"><strong>Salomon QST Access 70 Ski Boots</strong></p>
+              
+              <div class="d-flex justify-content-center align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="btn btn-md
+                 btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#SalomonQSTModal">View</button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
+              </div>
+              <div class="modal fade" id="SalomonQSTModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <img src = "./images/SalomonQST.jpg" alt = "Salomon QST Access 70 Wide Ski Boots">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Salomon x Access 60 Wide Ski Boots</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="card-text">Designed for intermediate skiers seeking a comfortable boot that will grow with them. My Custom Fit comfort This liner offers great comfort, good insulation and easy step-in.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card shadow-sm h-70">
+            <img src = "./images/Salomon.jpg" alt = "Salomon x Access 60 Wide Ski Boots">
+            <div class="card-body">
+              <p class="card-title"><strong>Salomon x Access 60 Ski Boots</strong></p>
+              <div class="d-flex justify-content-center align-items-center">
+               <div class="btn-group">
+                  <button type="button" class="btn btn-md
+                 btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#SalomonModal">View</button>
+                </div>
+              </div>
+              <div class="modal fade" id="SalomonModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <img src = "./images/Salomon.jpg" alt = "Salomon x Access 60 Wide Ski Boots">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Salomon x Access 60 Wide Ski Boots</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                       <p class="card-text">Buckle up and blast off. With a softer flex, these accessible boots are a great choice for recreational skiers with a fun-first attitude. Fine tuned for female anatomy, the cuff and liner are shaped to prevent ankle slop and heel lift.</p>
+                       <!-- <p><strong>$250.00</strong></p> -->
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card shadow-sm">
-            <img src = "./images/bluebell.jpg" alt = "bluebell">
+          <div class="card shadow-sm h-70">
+            <img src = "./images/Rossignol.jpg" alt = "Rossignol Evo 70 Ski Boots">
             <div class="card-body">
-              <p class="card-text">Hyacinthoides is classified in the subfamily Scilloideae (now part of the family Asparagaceae, but formerly treated as a separate family, called Hyacinthaceae), alongside genera such as Scilla and Ornithogalum.</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <p class="card-title"><strong>Rossignol Evo 70 Ski Boots</strong></p>
+              <div class="d-flex justify-content-center align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="btn btn-md
+                 btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RossignolModal">View</button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
+              </div>
+              <div class="modal fade" id="RossignolModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <img src = "./images/Rossignol.jpg" alt = "Salomon x Access 60 Wide Ski Boots">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Rossignol Evo 70 Beginner Ski Boots</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="card-text">Beginner skiers get the best of both worlds with the Rossignol Evo 70 men's alpine ski boots. The three-buckle shell delivers confident control and forgiving flex. Your alpine ski boots must give you sufficient comfort and support. </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card shadow-sm">
-            <img src = "./images/daisy.jpg" alt = "daisy">
-
+          <div class="card shadow-sm h-70">
+            <img src = "./images/Advant.jpg" alt = "Head Advant Edge 75 Ski Boots">
             <div class="card-body">
-              <p class="card-text">Leucanthemum vulgare, commonly known as the ox-eye daisy, oxeye daisy, dog daisy, marguerite (French: Marguerite commune, "common marguerite") and other common names,[2] is a widespread flowering plant native to Europe and the temperate regions of Asia, and an introduced plant to North America, Australia and New Zealand.</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <p class="card-title"><strong>Head Advant Edge 75 Ski Boots</strong></p>
+              <div class="d-flex justify-content-center align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="btn btn-md
+                 btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#AdvantModal">View</button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src = "./images/rose.jpg" alt = "rose">
-            <div class="card-body">
-              <p class="card-text">A rose is either a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="modal fade" id="AdvantModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <img src = "./images/Advant.jpg" alt = "Salomon x Access 60 Wide Ski Boots">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Head Advant Edge 75 Ski Boots</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="card-text">Get custom comfort in these efficient downhill boots. The AdvantEDGE shell ups your power transfer by 30% and rebound by 40%. The result is a naturally centered, balanced stance that offers better skiing, good control through turns and less effort overall.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src = "./images/tulip.jpg" alt = "tulip">
-            <div class="card-body">
-              <p class="card-text">Tulips (Tulipa) are a genus of spring-blooming perennial herbaceous bulbiferous geophytes (having bulbs as storage organs). The flowers are usually large, showy and brightly coloured, generally red, pink, yellow, or white (usually in warm colours).</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src = "./images/redflower.jpg" alt = "redflower">
-            <div class="card-body">
-              <p class="card-text">This is a redflower that I found on a free image site. I think it is pretty.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
               </div>
             </div>
           </div>
@@ -206,12 +241,10 @@
 </main>
 
 <footer class="text-body-secondary py-5">
-  <div class="container">
+  <div class="d-flex justify-content-center">
     <p class="float-end mb-1">
-      <a href="#">Back to top</a>
+      <a href="#" style="margin:center; text-size-adjust: 100px;">Back to top</a>
     </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
   </div>
 </footer>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
