@@ -17,27 +17,33 @@ function displaySearchResults(data) {
 
 		trackElement.id = track.id;
 		trackElement.innerHTML = `
-		<div class="d-flex align-items-stretch">
 		<div class="row">
-			<div class="col-md-4">
-				<h3>${track.title}</h3>
-				<img src="${track.album.cover}" alt="Album Cover"/>
-				<p>Album: ${track.album.title}</p>
-			</div>
-			<div class="col-md-4">
-				<audio controls>
-					<source src="${track.preview}" type="audio/mp3">
-					Your browser does not support the audio element.
-				</audio>
-			</div>
-			<div class="col-md-4">
-				<p>Artist: ${track.artist.name}</p>
-				<img src="${track.artist.picture}" alt="Artist Picture"/>
-			</div>
-			<div class="col-md-4">
-				<button class="btn btn-primary" onclick="addToCollection(${track.id})">+</button>
-			</div>
+		<div class="col-md-2">
+			<h3>${track.title}</h3>
+			<img 
+			src="${track.album.cover}"
+			style="height: 7rem; width: 7rem; object-fit: cover; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border: 0.35rem solid white;"
+			/>
+			<p>Album: ${track.album.title}</p>
 		</div>
+		<div class="col-md-4 my-auto d-flex align-items-center justify-content-center">
+        <audio controls>
+            <source src="${track.preview}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+		<div class="col-md-4 d-flex align-items-center">
+        <img 
+            src="${track.artist.picture}" 
+            style="height: 6rem; width: 6rem; object-fit: cover; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 50%; border: 0.35rem solid white;" 
+        />
+        <p class="ml-3">Artist: ${track.artist.name}</p>
+    </div>
+    <div class="col-md-2 my-auto d-flex align-items-center justify-content-center">
+        <button class="btn btn-primary"
+		style="height: 3rem; width: 3rem; object-fit: cover; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 50%; border: 0.35rem solid white;"
+		onclick="toggleButton(this); addToCollection(${track.id})">+</button>
+    </div>
 	</div>
 	
 	`;
@@ -73,4 +79,10 @@ async function addToCollection(trackId) {
 	} else {
 		console.log('song in collection already');
 	}
+}
+
+function toggleButton(button) {
+	button.classList.remove('btn-primary');
+	button.classList.add('btn-success');
+	button.innerHTML = '✔';
 }
