@@ -47,7 +47,6 @@ function displaySearchResults(data) {
 	</div>
 	
 	`;
-
 		searchResultsElement.appendChild(trackElement);
 	});
 }
@@ -70,12 +69,12 @@ async function addToCollection(trackId) {
 
 			// Add the trackObj instance to the collection
 			collection.push(trackData);
-
+			window.sessionStorage.setItem("Collection", JSON.stringify(collection));
 			console.log('Song added: ', trackData);
 		} catch (error) {
 			console.error('Error adding song to collection: ', error);
 		}
-		console.log('Current collection: ', collection);
+		console.log('Current collection: ', JSON.parse(sessionStorage.getItem("Collection")));
 	} else {
 		console.log('song in collection already');
 	}
