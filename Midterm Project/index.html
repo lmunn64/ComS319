@@ -51,7 +51,7 @@
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body onload = "displayCollection()">
 		<header
 			data-bs-theme="dark"
 			class="bg-green-500"
@@ -63,12 +63,12 @@
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
 						<div class="col-sm-auto py-4 text-left">
-							<span class="navbar-brand mb-0 h1">My Music Collection</span>
+							<span class="navbar-brand mb-0 h1" style = "font-size:x-large;">My Music Collection</span>
 						</div>
 						<div class="col-sm-auto py-4 text-right">
 							<h3 style="display: inline-block">
 								<a
-									style="margin:auto; text-decoration: none;color:slategray"
+									style="margin:auto; text-decoration: none;color:rgb(104, 112, 226)"
 									href="index.html"
 									class="bg-white inline-block font-semibold hover:text-white py-1 px-2 border hover:border-transparent hover:scale-120 rounded outline-none"
 									><strong>Home</strong></a
@@ -76,7 +76,7 @@
 							</h3>
 							<h3 style="display: inline-block">
 								<a
-									style="margin:auto; text-decoration: none;color:slategray"
+									style="margin:auto; text-decoration: none;color:rgb(104, 112, 226)"
 									href="search.html"
 									class="bg-white inline-block font-semibold hover:text-white py-1 px-2 border hover:border-transparent rounded outline-none"
 									><strong>Search</strong></a
@@ -84,7 +84,7 @@
 							</h3>
 							<h3 style="display: inline-block">
 								<a
-									style="margin:auto; text-decoration: none;color:slategray"
+									style="margin:auto; text-decoration: none;color:rgb(104, 112, 226)"
 									href="about.html"
 									class="bg-white inline-block font-semibold hover:text-white py-1 px-2 border hover:border-transparent rounded outline-none"
 									><strong>About</strong></a
@@ -105,17 +105,14 @@
 			</section>
 		</main>
 
-		<footer class="text-body-secondary py-5">
-			<div class="d-flex justify-content-center">
-				<p class="float-end mb-1">
-					<a
-						href="#"
-						style="margin: center"
-						>Back to top</a
-					>
-				</p>
+		<div class="album py-5 bg-body-tertiary">
+			<div id = "main" class="container">
+				<div id = "catalogueCards" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 row-lg-12">
+				</div>
 			</div>
-		</footer>
+		</div>
+		
+		<script src ="index.js"></script>
 		<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
