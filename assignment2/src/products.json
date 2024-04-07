@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "title": "Salomon QST Access 70 Ski Boots",
+      "price": 109.95,
+      "description": "Designed for intermediate skiers seeking a comfortable boot that will grow with them. My Custom Fit comfort This liner offers great comfort, good insulation and easy step-in.",
+      "category": "Ski Boots",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQAQDhNtli_pc6p2YVGQCXbfOEifSsGO6ewUajsGO_ZvO4n194cXD8q3_bYCW3vAjXDsARiCckcmFZbvaD9HR5DdO6mW-OmOA",
+      "alt":  "Salomon QST Access 70 Ski Boots",
+      "rating": { "rate": 3.9, "count": 120 },
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "title": "Salomon x Access 60 Wide Ski Boots",
+      "price": 122.39,
+      "description": "Buckle up and blast off. With a softer flex, these accessible boots are a great choice for recreational skiers with a fun-first attitude. Fine tuned for female anatomy, the cuff and liner are shaped to prevent ankle slop and heel lift.",
+      "category": "Ski Boots",
+      "image": "https://res.cloudinary.com/dyx4yhvoq/image/fetch/w_960,h_960,c_limit,f_auto,q_auto/https://www.coloradoskishop.com/v/vspfiles/photos/SXA60W22-2.jpg",
+      "rating": { "rate": 4.1, "count": 259 },
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "title": "K2 Aspect Snowboard Boots",
+      "price": 519.95,
+      "description": "Built with the experienced backcountry snowboarder in mind, the ultra-tough K2 Aspect is the splitboard and backcountry boot of choice for accessing any terrain.",
+      "category": "Snowboard Boots",
+      "image": "https://cdn.media.amplience.net/i/k2/k2_2324_aspect_black_B2303013_1?w=1024&qlt=100&fmt=webp&fmt.interlaced=true&bg=white&dpi=144",
+      "rating": { "rate": 4.7, "count": 500 },
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "title": "K2 Waive Snowboard Boots",
+      "price": 549.95,
+      "description": "Designed for the long haul, the K2 Waive snowboard boot is built for those long days in the skin track.",
+      "category": "men's clothing",
+      "image": "https://cdn.media.amplience.net/i/k2/k2_2324_waive_black_B2303012_1?w=1024&qlt=100&fmt=webp&fmt.interlaced=true&bg=white&dpi=144",
+      "rating": { "rate": 2.1, "count": 430 },
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "title": "Evo Merge Ski Poles 2024",
+      "price": 29.97,
+      "description": "Throw on your blinkers, check those mirrors, and get ready to merge onto the skiing superhighway. The evo Merge Ski Poles are strong, durable, and ready to keep you pole planting with a smile all day long.",
+      "category": "Ski Poles",
+      "image": "https://images.evo.com/imgp/700/183328/1079051/evo-merge-ski-poles-2024-.jpg",
+      "rating": { "rate": 4.6, "count": 400 },
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "title": "Armada Legion Poles 80 cm",
+      "price": 63.96,
+      "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+      "category": "Ski Poles",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRZ81Vze15mzTyjgz593WsV97944KJBR7HHARQ6zV-WpwyMipQHUbOj_rc2LDFPtkkw8EM6yUEgQfZVZP1OUH-r6A5k6LfmAIBMyB9MgnHF8M7TvmINjRhIsdpH",
+      "rating": { "rate": 3.9, "count": 70 },
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "title": "K2 Alchemeist Men's Snowboard",
+      "price": 749.95,
+      "description": "The North Star in the K2 Snowboarding snowboard offering, and the marquee of the Landscape Collection, the Alchemist is a hard-charging, directional freeride board for the skilled rider.",
+      "category": "Mens Snowboard",
+      "image": "https://cdn.media.amplience.net/i/k2/k2_2324_alchemist_B2302003_1?w=1024&qlt=100&fmt=webp&fmt.interlaced=true&bg=white&dpi=144",
+      "rating": { "rate": 3, "count": 400 },
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "title": "K2 Antidote Unisex Snowboard",
+      "price": 649.95,
+      "description": "We delivered the board our team riders always wanted with the Antidote. Targeted at advanced-to-expert level riders whose style blurs the lines between freeride and freestyle.",
+      "category": "Unisex Snowboard",
+      "image": "https://cdn.media.amplience.net/i/k2/k2_2324_antidote_B2302004_1?w=1024&qlt=100&fmt=webp&fmt.interlaced=true&bg=white&dpi=144",
+      "rating": { "rate": 1.9, "count": 100 },
+      "quantity": 1
+    }
+  ]
+  
