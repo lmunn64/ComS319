@@ -30,8 +30,8 @@ const Confirmation = () => {
 						<div className="card p-4">
 							<h3>Shipping Information</h3>
 							<p>
-								<strong>Name:</strong> {shippingInfo.firstName}{' '}
-								{shippingInfo.lastName}
+								<strong>Name:</strong> {paymentInfo.firstName}{' '}
+								{paymentInfo.lastName}
 							</p>
 							<p>
 								<strong>Address:</strong> {shippingInfo.address1},{' '}
