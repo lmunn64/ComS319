@@ -2,12 +2,11 @@ async function searchSong() {
 	const trackName = document.getElementById('searchInput').value;
 	const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 	const apiUrl = `https://api.deezer.com/search?q=track:"${trackName}"`;
-	const response = await fetch(apiUrl);
+	const response = await fetch(proxyUrl + apiUrl);
 	const data = await response.json();
 	console.log(data);
 	displaySearchResults(data.data);
 }
-
 
 function displaySearchResults(data) {
 	const searchResultsElement = document.getElementById('searchResults');
@@ -52,19 +51,21 @@ function displaySearchResults(data) {
 	});
 }
 
-if(!sessionStorage.getItem("Collection") && !sessionStorage.getItem("idCollection")){
+if (
+	!sessionStorage.getItem('Collection') &&
+	!sessionStorage.getItem('idCollection')
+) {
 	var collection = [];
 	var idCollection = [];
-}
-else{
-	var collection = JSON.parse(sessionStorage.getItem("Collection"));
-	var idCollection = JSON.parse(sessionStorage.getItem("idCollection"));
+} else {
+	var collection = JSON.parse(sessionStorage.getItem('Collection'));
+	var idCollection = JSON.parse(sessionStorage.getItem('idCollection'));
 }
 
 async function addToCollection(trackId) {
 	if (!idCollection.includes(trackId)) {
 		idCollection.push(trackId);
-		window.sessionStorage.setItem("idCollection", JSON.stringify(idCollection));
+		window.sessionStorage.setItem('idCollection', JSON.stringify(idCollection));
 		try {
 			// Fetch detailed information of the track using its ID
 			const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -77,12 +78,15 @@ async function addToCollection(trackId) {
 
 			// Add the trackObj instance to the collection
 			collection.push(trackData);
-			window.sessionStorage.setItem("Collection", JSON.stringify(collection));
+			window.sessionStorage.setItem('Collection', JSON.stringify(collection));
 			console.log('Song added: ', trackData);
 		} catch (error) {
 			console.error('Error adding song to collection: ', error);
 		}
-		console.log('Current collection: ', JSON.parse(sessionStorage.getItem("Collection")));
+		console.log(
+			'Current collection: ',
+			JSON.parse(sessionStorage.getItem('Collection'))
+		);
 	} else {
 		console.log('song in collection already');
 	}
@@ -93,5 +97,3 @@ function toggleButton(button) {
 	button.classList.add('btn-success');
 	button.innerHTML = '✔';
 }
-
-
