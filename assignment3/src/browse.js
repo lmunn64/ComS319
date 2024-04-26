@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {
-	BrowserRouter as Router,
-	Route,
-	Routes,
-	useNavigate,
-	useLocation,
+	useNavigate
 } from 'react-router-dom';
 
 
 const Browse = () => {
-	var items
-	const { state } = useLocation();
+
 	let navigate = useNavigate();
 	const [query, setQuery] = useState('');
-	const [cart, setCart] = useState([]);
+
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
@@ -60,23 +55,11 @@ const Browse = () => {
 			</div>
 			));
 
-	const cartItems = cart.map((el) => (
-		<div key={el.id}>
-			<img
-				className="img-fluid"
-				src={el.image}
-				alt={el.title}
-				width={50}
-			/>
-			{el.title}${el.price}
-		</div>
-	));
-
 	return (
 		<div>
 			<div className="container">
 				<div className="row justify-content-between">
-					<div className="col-2 align-self-center">
+					<div className="col-2 align-self-between">
 						<h4>
 							<b>Fake Store Catalogue</b>
 						</h4>
@@ -90,13 +73,26 @@ const Browse = () => {
 							onChange={(e) => setQuery(e.target.value)}
 						/>
 					</div>
-					<div className="col-2 align-self-center">
+					<div className="col-lg-4 align-self-center">
 						<button
 							type="button"
-							className="btn btn-md btn-primary"
+							class="btn btn-md btn-primary m-1"
 							onClick={() => navigate('/additem')}
 						>
 							Add item
+						</button>
+						<button
+							type="button"
+							class="btn btn-md btn-primary m-1"
+							onClick={() => navigate('/updateitem')}
+						>
+							Update Item
+						</button><button
+							type="button"
+							class="btn btn-md btn-primary"
+							onClick={() => navigate('/')}
+						>
+							Delete Item
 						</button>
 					</div>
 				</div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Browse from './browse';
 import 'bootstrap/dist/css/bootstrap.css';
 import AddItem from './additem';
-import Confirmation from './confirmation';
+import UpdateItem from './updateitem';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -20,8 +20,8 @@ root.render(
 				element={<AddItem />}
 			/>
 			<Route
-				path="/confirmation"
-				element={<Confirmation />}
+				path="/updateitem"
+				element={<UpdateItem />}
 			/>
 			<Route
 				path="/"

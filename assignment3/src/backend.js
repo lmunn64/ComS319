@@ -60,10 +60,12 @@ app.post("/addItem", async (req, res) => {
     const values = Object.values(req.body);
     const newDocument = {
         "id": values[0],
-        "name": values[1],
+        "title": values[1],
         "price": values[2],
         "description": values[3],
-        "imageUrl": values[4]
+        "category": values[4],
+        "image": values[5],
+        "rating": values[6],  
     };
     console.log(newDocument)
     

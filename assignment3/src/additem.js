@@ -34,7 +34,23 @@ const AddItem = () => {
 	};
 
 	const handleSubmit = (event) => {
-		console.log("Submitted")
+		console.log(formData)
+		fetch("http://localhost:27017/addItem", {
+        method: "POST",
+        body: JSON.stringify({
+            "id": formData.id,
+            "title": formData.title,
+            "price": formData.price,
+            "description": formData.description,
+            "category": formData.category,
+			"image": formData.image,
+			"rating": {"rate": formData.rate,"count": formData.count}
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    .then(response => response.json())
 	};
 
 	return (
