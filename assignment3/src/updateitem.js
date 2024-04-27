@@ -15,6 +15,7 @@ const UpdateItem = () =>{
     
 	let navigate = useNavigate();
 	const [query, setQuery] = useState('');
+	const [price, setPrice] = useState('');
 	const [data, setData] = useState([]);
     const [show, setShow] = useState(false);
 
@@ -22,22 +23,33 @@ const UpdateItem = () =>{
     const handleShow = () => setShow(true);
 
     const [formData, setFormData] = useState({
-		id: '',
+		id: 1,
 		price: '',
 	});
 
-    function handleUpdate(){
-        fetch(`http://localhost:27017/updateitem/${1}`, {
+    const handleUpdate = (event) =>{
+		console.log(price)
+		setPrice(event.target.value)
+		if(price && formData.id){
+			fetch(`http://localhost:27017/updateitem/${formData.id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(
                 { 
-                    "price": formData.price,        
+                    "price": price,        
                 }
             )
         })
+		}
+        
     }
-    
+
+    function setQueryAndId(e){
+		setQuery(e)
+		formData.id = e
+		console.log(formData.id)
+	}
+
 	useEffect(() => {
 		fetchData();
 	}, []);
@@ -120,7 +132,7 @@ const UpdateItem = () =>{
 							type="text"
 							placeholder="Search for items by id..."
 							value={query}
-							onChange={(e) => setQuery(e.target.value)}
+							onChange={(e) => setQueryAndId(e.target.value)}
 						/>
 					</div>
 					<div className="col-2 align-self-center">
@@ -153,8 +165,7 @@ const UpdateItem = () =>{
                         <Form.Control
                             type="price"
                             placeholder="109.55"
-
-                            autoFocus
+							onChange={handleUpdate}
                         />
                         </Form.Group>
                     </Form>
@@ -163,7 +174,7 @@ const UpdateItem = () =>{
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleUpdate()}>
+                    <Button variant="primary" onClick={handleUpdate}>
                         Save Changes
                     </Button>
                 </Modal.Footer>
