@@ -19,11 +19,10 @@ const AddItem = () => {
 		category: '',
 		image: '',
 		rate: '',
-		count: ''
+		count: '',
 	});
 
-	useEffect(() => {
-	}, []);
+	useEffect(() => {}, []);
 
 	const handleInputChange = (e) => {
 		const { name, value } = e.target;
@@ -34,23 +33,22 @@ const AddItem = () => {
 	};
 
 	const handleSubmit = (event) => {
-		console.log(formData)
-		fetch("http://localhost:27017/addItem", {
-        method: "POST",
-        body: JSON.stringify({
-            "id": formData.id,
-            "title": formData.title,
-            "price": formData.price,
-            "description": formData.description,
-            "category": formData.category,
-			"image": formData.image,
-			"rating": {"rate": formData.rate,"count": formData.count}
-        }),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8"
-        }
-    })
-    .then(response => response.json())
+		console.log(formData);
+		fetch('http://localhost:27017/addItem', {
+			method: 'POST',
+			body: JSON.stringify({
+				id: parseInt(formData.id),
+				title: formData.title,
+				price: formData.price,
+				description: formData.description,
+				category: formData.category,
+				image: formData.image,
+				rating: { rate: formData.rate, count: formData.count },
+			}),
+			headers: {
+				'Content-type': 'application/json; charset=UTF-8',
+			},
+		}).then((response) => response.json());
 	};
 
 	return (
@@ -66,9 +64,7 @@ const AddItem = () => {
 						<button
 							type="button"
 							class="btn btn-md btn-primary"
-							onClick={() =>
-								navigate('/')
-							}
+							onClick={() => navigate('/')}
 						>
 							Return
 						</button>
@@ -130,10 +126,9 @@ const AddItem = () => {
 								name="description"
 								value={formData.description}
 								onChange={handleInputChange}
-								rows= "3"
+								rows="3"
 								required
 							/>
-
 						</div>
 					</div>
 					<div class="row justify-content-around">
@@ -194,14 +189,14 @@ const AddItem = () => {
 							/>
 						</div>
 					</div>
-					<div class = "text-center my-2">
-					<button
-						class="btn btn-primary justify-content-center"
-						type="submit"
-						onClick={handleSubmit}
-					>
-						Submit New Item
-					</button>
+					<div class="text-center my-2">
+						<button
+							class="btn btn-primary justify-content-center"
+							type="submit"
+							onClick={handleSubmit}
+						>
+							Submit New Item
+						</button>
 					</div>
 				</form>
 			</div>
