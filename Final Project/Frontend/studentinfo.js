@@ -7,38 +7,17 @@ const StudentInfo = () => {
 	return (
 		<div>
 			<div className="container">
-				<div className="row justify-content-between">
-					<div className="col-2 align-self-between">
+				<div className="row justify-content-between align-items-center">
+					<div className="col-2">
 						<h4>
-							<b>Fake Store Catalogue</b>
+							<b>My Song Collection</b>
 						</h4>
 					</div>
-					<div className="col-md-auto col-md-4 align-self-center"></div>
-					<div className="col-lg-4 align-self-center">
+					<div className="col-lg-6 d-flex justify-content-end">
+						
 						<button
 							type="button"
 							className="btn btn-md btn-primary m-1"
-							onClick={() => navigate('/additem')}
-						>
-							Add Songs
-						</button>
-						<button
-							type="button"
-							className="btn btn-md btn-primary m-1"
-							onClick={() => navigate('/updateitem')}
-						>
-							Update Item
-						</button>
-						<button
-							type="button"
-							className="btn btn-md btn-primary"
-							onClick={() => navigate('/delete')}
-						>
-							Delete Item
-						</button>
-						<button
-							type="button"
-							className="btn btn-md btn-primary"
 							onClick={() => navigate('/')}
 						>
 							Return
@@ -85,7 +64,7 @@ const StudentInfo = () => {
 									Computer Science Student
 								</p>
 								<p>
-									Hey! I am Luke and I love skiing. I am currently taking com s
+									Hey! I am Luke and I love skiing and snowboarding! I am currently taking Com S
 									319 at Iowa State University. If you want to reach me at
 									lmunn64@iastate.edu
 								</p>
@@ -104,7 +83,7 @@ const StudentInfo = () => {
 								>
 									Ali Jannesari
 								</p>
-								<p>2/8/24</p>
+								<p>5/5/24</p>
 							</div>
 						</section>
 					</div>

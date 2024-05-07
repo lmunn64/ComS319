@@ -39,7 +39,7 @@ const AddItem = () => {
 				<div className="row justify-content-between align-items-center">
 					<div className="col-2">
 						<h4>
-							<b>My Music App</b>
+							<b>My Song Collection</b>
 						</h4>
 					</div>
 					<div className="col-md-auto col-md-4"></div>
@@ -89,7 +89,7 @@ const AddItem = () => {
 									<div className="card h-100">
 										<br />
 										<img
-											src={track.album.cover}
+											src={track.album.cover_big}
 											className="card-img-top"
 											alt={track.title}
 											style={{

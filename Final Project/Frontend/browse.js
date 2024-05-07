@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const Browse = () => {
 	let navigate = useNavigate();
 	const [query, setQuery] = useState('');
-
+	var title = "Welcome to your Collection!"
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
@@ -35,7 +35,7 @@ const Browse = () => {
 			<div className="card h-100">
 				<br />
 				<img
-					src={track.album.cover}
+					src={track.album.cover_big}
 					className="card-img-top"
 					alt={track.title}
 					style={{
@@ -84,7 +84,7 @@ const Browse = () => {
 				<div className="row justify-content-between align-items-center">
 					<div className="col-2">
 						<h4>
-							<b>My Songs App</b>
+							<b>My Song Collection</b>
 						</h4>
 					</div>
 					<div className="col-md-auto col-md-4">
@@ -107,16 +107,9 @@ const Browse = () => {
 						<button
 							type="button"
 							className="btn btn-md btn-primary m-1"
-							onClick={() => navigate('/updateitem')}
+							onClick={() => navigate('/updatesong')}
 						>
-							Update Item
-						</button>
-						<button
-							type="button"
-							className="btn btn-md btn-primary m-1"
-							onClick={() => navigate('/delete')}
-						>
-							Delete Item
+							Update Songs
 						</button>
 						<button
 							type="button"
@@ -129,6 +122,7 @@ const Browse = () => {
 				</div>
 			</div>
 			<div className="album py-5 bg-light">
+			<h3 className="mb-3 text-center">{title}</h3>
 				<div className="container">
 					<div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 row-lg-12">
 						{listItems}
